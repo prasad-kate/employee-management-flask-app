@@ -1,0 +1,101 @@
+<html>
+    <head>
+        <title>Add Emergency Contact</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            h1 {
+                margin: 1em;
+            }
+
+            form {
+                width: 100%;
+                padding: 2em;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            table {
+                border-collapse: collapse;
+                border: none;
+                width: 30%;
+            }
+
+            tr {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                border: 1px solid red;
+            }
+
+            table th, tr, td {
+                border: none;
+            }
+
+            input {
+                width: 95%;
+                margin: 1em;
+                padding: 0.5em 0.5em;
+            }
+
+             .submit {
+                width: 100%;
+             }
+
+             #btn-submit {
+                padding: 0.7em;
+                background: lightblue no-repeat;
+                cursor: pointer;
+                border: none;
+                border-radius: 0.5em;
+             ]
+
+        </style>
+    </head>
+    <body>
+        <h1> Add Emergency Contact</h1>
+        <form method="POST" action="/addEmergency">
+            <table align="center" border="|" >
+                <tr>
+                    <td>Employee ID:</td>
+                    <td><input type="text" name="eid" required /></td>
+                </tr>
+                <tr>
+                    <td>First Name:</td>
+                    <td><input type="text" name="fname" required /></td>
+                </tr>
+                <tr>
+                    <td>Last Name:</td>
+                    <td><input type="text" name="lname" required /></td>
+                </tr>
+                <tr>
+                    <td>Relation:</td>
+                    <td><input type="text" name="relation" required /></td>
+                </tr>
+                <tr>
+                    <td>Phone:</td>
+                    <td>
+                        <input type="text" name="phone"required />
+                    </td>
+                </tr>
+                <tr>
+                    <td class='submit' colspan="2" align="center">
+                        <input id="btn-submit" type="submit" name="send" />
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>

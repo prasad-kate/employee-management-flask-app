@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>Employee Management</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            h1 {
+                text-align: center;
+                margin: 2em;
+            }
+
+            .container {
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            .btn {
+                margin: 1em;
+                font-size: 1.5em;
+                width: 12em;
+                height: 12em;
+                box-shadow: 0.2em 0.2em 0.3em 0.1em lightgray;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Employee Management</h1>
+        <div class="container">
+            <button class="btn" onclick="location.href = '/employee'">Employee Details</button>
+            <button class="btn" onclick="location.href = '/emergency'">Emergency Contact</button>
+            <button class="btn" onclick="location.href = '/history'">History</button>
+            <button class="btn" onclick="location.href = '/leaves'">Leaves</button>
+        </div>
+    </body>
+</html>

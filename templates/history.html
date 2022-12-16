@@ -1,0 +1,93 @@
+<html>
+    <head>
+        <title>History</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+
+            h1 {
+                margin: 1em;
+                text-align: center;
+            }
+
+            .container {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+            }
+            table {
+                border-collapse: collapse;
+                border: 1px solid lightgray;
+            }
+
+            table td, th {
+                padding: 1em;
+            }
+
+            .btn {
+                padding: 0.5em 2em;
+                margin: 1em;
+            }
+
+            th {
+                border: none;
+                background-color: #F0F0F0;
+            }
+
+            .wrapper {
+                padding: 0.5em 1em;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            #edit {
+                text-decoration: none;
+                color: orange;
+            }
+            #delete {
+                text-decoration: none;
+                color: red;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>History</h1>
+        <div class="container">
+        <table align="center">
+            <tr>
+                <th>Employee ID</th>
+                <th>Company</th>
+                <th>Address</th>
+                <th>Role</th>
+                <th>Join Date</th>
+                <th>Leave Date</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+            {% for x in d %}
+                <tr>
+                <td align="center">{{x.0}}</td>
+                <td>{{x.1}}</td>
+                <td>{{x.2}}</td>
+                <td align="center">{{x.3}}</td>
+                <td>{{x.4}}</td>
+                <td>{{x.5}}</td>
+                <td align="center"><a id="edit" href="editHistory/{{x.0}}"><i class="fa fa-pencil"></i></a></td>
+                <td align="center"><a id="delete" href="deleteHistory/{{x.0}}"><i class="fa fa-trash-o"></i></a></td>
+                </tr>
+            {%endfor%}
+        </table>
+        </div>
+        <div class="wrapper">
+            <button class="btn" onclick="location.href = '/'">Home</button>
+            <button class="btn" onclick="location.href = '/createHistory'">Add Employer History</button>
+        </div>
+    </body>
+</html>

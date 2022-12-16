@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update History</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            h1 {
+                margin: 1em;
+            }
+
+            form {
+                width: 100%;
+                padding: 2em;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            table {
+                border-collapse: collapse;
+                border: none;
+                width: 30%;
+            }
+
+            tr {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                border: 1px solid red;
+            }
+
+            table th, tr, td {
+                border: none;
+            }
+
+            input {
+                width: 95%;
+                margin: 1em;
+                padding: 0.5em 0.5em;
+            }
+
+             .submit {
+                width: 100%;
+             }
+
+             #btn-submit {
+                padding: 0.7em;
+                background: lightblue no-repeat;
+                cursor: pointer;
+                border: none;
+                border-radius: 0.5em;
+             ]
+
+        </style>
+    </head>
+<body>
+    <h1>Employer History</h1>
+    <form method="POST" action="/updateHistory/{{d.0}}">
+        <table align="center" border="|" >
+            <tr>
+                <td colspan="2"><b>Employee ID: {{d.0}}</b></td>
+            </tr>
+            <tr>
+                <td>Company:</td>
+                <td>
+                   <input type="text" name="company" value="{{d.1}}" required/>
+                </td>
+            </tr>
+            <tr>
+                <td>Address:</td>
+                <td>
+                   <input type="text" name="address" value="{{d.2}}" required/>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Role:</td>
+                <td>
+                    <input type="text" name="role" value="{{d.3}}" required/>
+                </td>
+            </tr><tr>
+                <td>Date of Join:</td>
+                <td>
+                    <input type="date" name="DOJ" value="{{d.4}}" required/>
+                </td>
+            </tr><tr>
+                <td>Date of Leave:</td>
+                <td>
+                    <input type="date" name="DOL" value="{{d.5}}" required/>
+                </td>
+            </tr>
+            <tr>
+                <td class="submit" colspan="2" align="center">
+                    <input id="btn-submit" type="submit" name="send" value="Update"/>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
