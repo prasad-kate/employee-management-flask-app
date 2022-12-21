@@ -15,9 +15,10 @@ Employee details page:
 
 
 
-Edit employee details page:
+Add employee details page:
 
-![e edit](https://user-images.githubusercontent.com/113192505/208900760-4ec66824-d200-43a2-b12b-e67eb284b68c.png)
+![e add](https://user-images.githubusercontent.com/113192505/208903113-fcb0f26c-0372-4e7e-95e9-dce60ca4cd42.png)
+
 
 
 
